@@ -69,7 +69,7 @@ const timeOptions = {
   },
   series: [
     {
-      name: "时长",
+      name: "平均时长",
       type: "bar",
       itemStyle: {
         normal: {
