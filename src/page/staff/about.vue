@@ -122,18 +122,8 @@ export default {
   },
   methods: {
     changeTimeOption(option) {
-        if(option == 1){
-          this.setTimeBarOption('week');
-          return;
-        }
-        if(option == 2){
-          this.setTimeBarOption('month');
-          return;
-        }
-        if(option == 3){
-          this.setTimeBarOption('year');
-          return;
-        }
+        const arrays = ['', 'week', 'month', 'year'];
+        this.setTimeBarOption(arrays[option]);
     },
     setTimeBarOption(data) {
       this.timeOptions.series[0].data = amateurTime[data];
