@@ -1,0 +1,30 @@
+#app .vu-menu-wrap .ivu-menu-item-active.ivu-menu-item-selected{
+  border-right: none;
+  color: #fff;
+  background: #2d8cf0!important;
+}
+.main-content{
+  position: absolute;
+  left: 160px;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  padding-top: 10px;
+  overflow: auto;
+}
+.single-page{
+  width: 80%;
+  margin: 0 auto;
+}
+.single-page .section{
+  border: 1px solid #00ad7c;
+  box-shadow: 0 0 8px #52d681;
+  border-radius: 10px;
+  min-height: 600px;
+  margin: 30px;
+  position: relative;
+  padding: 10px;
+}
+.single-page .section:last-of-type{
+  margin-bottom: 60px;
+}
