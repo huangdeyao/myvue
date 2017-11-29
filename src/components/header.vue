@@ -29,7 +29,7 @@ export default {
       'OUT_LOGIN'
     ]),
     goLogin() {
-      this.$router.push({path: 'login'});
+      this.$router.push({path: '/login'});
     },
     outLogin() {
       this.$Modal.confirm({

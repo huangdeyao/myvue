@@ -49,7 +49,7 @@ export default {
           vm.USER_NAME(vm.formValidate.userName);
           vm.$Message.success('登录成功');
           setTimeout(function () {
-            vm.$router.push({path: 'home'});
+            vm.$router.push({path: '/home/index'});
           }, 2000);
         }
       })
