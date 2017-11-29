@@ -34,8 +34,8 @@ export const appRouter = [
     text: '公司基本信息',
     component: HelloWorld,
     children: [
-        { path: 'frameWork', text: '公司架构', name: 'frameWork', component: frameWork, meta: {openNames: 'company'}},
-        { path: 'business', text: '公司业务', name: 'business', component: business, meta: {openNames: 'company'}}
+        { path: 'frameWork', text: '公司架构', name: 'frameWork', component: frameWork, meta: {openNames: 'company', requireAuth: true}},
+        { path: 'business', text: '公司业务', name: 'business', component: business, meta: {openNames: 'company', requireAuth: true}}
     ]
   },
   {
@@ -44,8 +44,8 @@ export const appRouter = [
     text: '员工基本信息',
     component: HelloWorld,
     children: [
-        { path: 'baseInfo', text: '基本情况', name: 'baseInfo', component: baseInfo, meta: {openNames: 'staff'}},
-        { path: 'about', text: '信息调查', name: 'about', component: about, meta: {openNames: 'staff'}}
+        { path: 'baseInfo', text: '基本情况', name: 'baseInfo', component: baseInfo, meta: {openNames: 'staff', requireAuth: true}},
+        { path: 'about', text: '信息调查', name: 'about', component: about, meta: {openNames: 'staff', requireAuth: true}}
     ]
   }
 ];

@@ -8,7 +8,8 @@ Vue.use(Vuex);
 
 const state = {
   user: localStorage.getItem("userName") || "",
-  menuList: []
+  menuList: [],
+  token: ''
 };
 state.menuList = Util.getMenuList(appRouter);
 

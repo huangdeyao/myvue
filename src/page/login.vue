@@ -46,7 +46,10 @@ export default {
       var vm = this;
       vm.$refs[name].validate((valid) => {
         if(valid){
-          vm.USER_NAME(vm.formValidate.userName);
+          vm.USER_NAME({
+            userName: vm.formValidate.userName,
+            token: "hasToken"
+          });
           vm.$Message.success('登录成功');
           setTimeout(function () {
             vm.$router.push({path: '/home/index'});
