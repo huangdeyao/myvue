@@ -25,7 +25,7 @@ export const appRouter = [
     access: 0,
     component: HelloWorld,
     children: [
-        { path: 'index', text: '首页', name: 'home_index', access: 0, component: Home, meta: {openNames: 'home'}}
+        { path: 'index', text: '首页', name: 'home', component: Home, meta: {openNames: 'home'}}
     ]
   },
   {

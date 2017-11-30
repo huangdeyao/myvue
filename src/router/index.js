@@ -1,9 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import {appRouter} from './router.js'
 import store from '../store'
+import {appRouter} from './router.js'
 
 Vue.use(Router)
+
+if (window.localStorage.getItem('token')) {
+    store.commit("USER_NAME", {
+      userName: store.state.user,
+      token: window.localStorage.getItem('token')
+    });
+}
 
 const router =  new Router({
   routes: appRouter

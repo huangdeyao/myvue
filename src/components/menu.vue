@@ -2,7 +2,7 @@
   <div class="vu-menu-wrap">
     <Menu theme="dark" width="auto" :active-name="$route.name" :open-names="openNamesArr" @on-select="handleMenu" ref="menu" accordion>
       <template v-for="item in menuList">
-        <router-link :to="item.path" v-if="!item.children">
+        <router-link :to="item.path + '/' + item.children[0].path" v-if="item.access === 0">
           <MenuItem :name="item.name"><span>{{ item.text }}</span></MenuItem>
         </router-link>
 
@@ -37,6 +37,10 @@ export default {
     this.$nextTick(() => {
       this.$refs.menu.updateOpened();
     })
+  },
+  watch: {
+    $route (to) {
+    }
   },
   methods: {
     handleMenu() {

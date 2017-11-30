@@ -5,10 +5,7 @@ Util.getMenuList = function(data){
       if(item.text){
         if(item.children){
           if(item.access == 0){
-            item.name = item.children[0].name;
-            item.path += "/" + item.children[0].path;
-            item.meta = item.children[0].meta;
-            delete item.children;
+            if(item.children.length > 1) return;
           }else{
             item.children.forEach((child, childIndex) => {
               item.children[childIndex].path = item.path + "/" + item.children[childIndex].path;
